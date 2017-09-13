@@ -1,0 +1,42 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width: 90%;
+	height: 1000px;
+	margin: 10px auto;
+	background-color: rgb(96,96,96) ;
+}
+
+ul{
+	width: 100%;
+	margin: 0px auto;
+	list-style: none;
+	background-color: #000;
+	display: inline-block;
+}
+
+ul li{
+	width: 20%;
+	float: right;
+}
+
+ul li a{
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+	color: #fff;	
+	font-family: Arial;
+	text-align: center;
+}
+
+ul li a:hover{
+	background-color:  rgb(140,255,0);
+	color: #000;
+}
+
+#img img{
+	width: 100%;
+}
