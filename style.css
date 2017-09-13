@@ -1,87 +1,42 @@
-@keyframes intermitente{
-	from{
-		background-color: rgba(0,0,0,0.4);
-	}
-	to{
-		background-color: rgba(0,0,0,0.1);
-
-	}
+*{
+	margin: 0px;
+	padding: 0px;
 }
 
 body{
-	height: 510px;
-	width: 510px;
-	margin: 60px auto;
+	width: 90%;
+	height: 1000px;
+	margin: 10px auto;
+	background-color: rgb(96,96,96) ;
 }
 
-#Tablero{	
-	
-	height: 450px;
-	width: 450px;
-	box-shadow: 2px 2px 10px;
+ul{
+	width: 100%;
+	margin: 0px auto;
+	list-style: none;
+	background-color: #000;
 	display: inline-block;
 }
 
- #Tablero div:hover {
-	animation-name:intermitente;
-	animation-duration: 0.1s;
-	animation-iteration-count: infinite;
-	font-size: 50px;
-	
-	
-
-}
-
-#Tablero div{
-	font-size: 40px;
-	text-align: center;
-	height: 56.25px;
-	width: 56.25px;
-	float: left;
-	text-transform: 
-
-
-}
-
-#Tablero div:nth-child(n+1):nth-child(even):nth-child(-n+8),
-#Tablero div:nth-child(n+17):nth-child(even):nth-child(-n+24),
-#Tablero div:nth-child(n+33):nth-child(even):nth-child(-n+40),
-#Tablero div:nth-child(n+49):nth-child(even):nth-child(-n+56),
-#Tablero div:nth-child(n+9):nth-child(odd):nth-child(-n+16),
-#Tablero div:nth-child(n+25):nth-child(odd):nth-child(-n+32),
-#Tablero div:nth-child(n+41):nth-child(odd):nth-child(-n+48),
-#Tablero div:nth-child(n+57):nth-child(odd):nth-child(-n+64)
-{
-	background-color: rgba(0,0,0,0.4);
-}
-
-#numeros{
-	height: 450px;
-	width: 56.25;
+ul li{
+	width: 20%;
 	float: right;
-	
-	
 }
 
-#numeros div{
+ul li a{
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+	color: #fff;	
+	font-family: Arial;
 	text-align: center;
-	height: 56.25px;
-	width: 56.25px;
-	font-size: 30px;
-
 }
 
-#Letras{
-	margin-top: 3.75px; 
-	height: 56.25px;
-	width: 450px;
+ul li a:hover{
+	background-color:  rgb(140,255,0);
+	color: #000;
 }
 
-#Letras div{
-	height: 56.25px;
-	width: 56.25px;
-	font-size: 30px;
-	text-align: center;
-	float: left;
-	
+#img img{
+	width: 100%;
 }
