@@ -4,6 +4,39 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <title> Guia de HTML </title>
 <style>
+.slide {
+width: 100%;
+margin: auto;
+overflow: hidden;
+}
+
+.slide ul {
+display: flex;
+padding: 0;
+width: 400%;
+animation: cambio 12s infinite alternate linear;
+}
+
+.slide li {
+width: 100%;
+list-style: none;
+}
+
+.slide img {
+width: 100%;
+}
+
+@keyframes cambio {
+0% {margin-left: 0;}
+20% {margin-left: 0;}
+25% {margin-left: -100%;}
+45% {margin-left: -100%;}
+50% {margin-left: -200%;}
+70% {margin-left: -200%;}
+75% {margin-left: -300%;}
+100% {margin-left: -300%;}
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -26,7 +59,23 @@ tr:nth-child(odd) {
 </style>
 </head>
 <body>
-<div id="img"><img src="Banner2.jpg"></div>
+<div class="slide">
+<ul>
+<li>
+  <img src="generador.jpg">
+ </li>
+<li>
+   <img src="banner2.jpg">
+</li>
+<li>
+  <img src="banner3.jpg">
+</li>
+<li>
+   <img src="banner4.jpg">
+</li>
+</ul>
+</div> 
+
   <header>
     <nav>
       <ul>
