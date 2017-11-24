@@ -1,0 +1,208 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+	box-sizing: border-box;
+
+}
+
+header{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+}
+
+nav{
+	top: -20px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: 20px auto;
+	/*max-width: 1000px;*/
+	width: 100%;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav > ul{
+	display: table;
+	width: 100%;
+	background: #000;
+	position: relative;
+}
+
+nav > ul li{
+	display: table-cell;
+}
+
+
+nav > ul li a{
+	color: #fff;
+	display: block;
+	line-height: 20px;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > ul > li a:hover{
+	background: #5da5a2;
+}
+
+nav > ul > li > a span {
+	background: #174459;
+	display: block;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	position: absolute;
+	top: -55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+
+
+}
+
+nav > ul > li > a span .icon{
+	display: block;
+	line-height: 60px;
+}
+
+nav > ul > li > a:hover > span{
+	top: 0px;
+}
+
+/*Colores*/
+
+nav ul li a .primero{
+	background: #0e5061;
+}
+
+nav ul li a .segundo{
+	background: #5da5a2;
+}
+
+nav ul li a .tercero{
+	background: #f25724;
+}
+
+/*Sub-menu*/
+
+nav > ul > li:hover >ul{
+	display: block;
+	height: 100%;
+}
+
+nav > ul > li > ul {
+	display: block;
+	position: absolute;
+	background: #000;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+	height: 0%;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+
+#banner{
+	display: block;
+	margin: 0px auto;
+	width: 100%;
+}
+
+/*/////////////////////////////////////////////////////////////////////CARROUSEL ////////////////////////////*/
+.content-all{
+	width: 400px;
+	margin: auto;
+	perspective: 10000px;
+	position: relative;
+}
+
+.content-carrousel{
+	width: 100%;
+	position: absolute;
+	animation: rotar 20s infinite linear;
+	transform-style: preserve-3d;
+
+}
+
+.content-carrousel figure{
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	position: absolute;
+	display: block;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) 
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(2){transform: rotateY(72deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(3){transform: rotateY(144deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(4){transform: rotateY(216deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(5){transform: rotateY(288deg) 
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(6){transform: rotateY(360deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg)
+translateZ(300px);}
+
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg)
+translateZ(300px);}
+
+.content-carrousel img {
+	width: 100%;
+	
+}
+
+.content-carrousel img:hover{
+	transform: scale(1.1);
+	transition: all 300;
+}
+
+@keyframes rotar {
+	from{
+		transform: rotateY(0deg);
+	}to{
+		transform: rotateY(360deg);
+	}
+}
+
+
+
+
+
+

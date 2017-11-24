@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="Styles/style1.css">
+<title> Guia de JavaScript </title>
+<style>
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #caf7d4;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: green;
+}
+tr:nth-child(odd) {
+    background-color: gray;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="AcercaDe.html">Acerca De</a></li>
+        <li><a href="GuiaJavaScript.html">Javascript</a></li>
+        <li><a href="CSS.html">Css</a></li>
+        <li><a href="GuiaHtml.html">Html</a></li>
+        <li><a href="i.html">Inicio</a></li>
+        <li><a href="Compras.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+<p align="center"><img src="aprender-javascript.jpg"/></p>
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Descripcion</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td>assert(expression, message)</td>
+    <td>Envía un mensaje si se expressionevalúa como false .</td>
+    <td><xmp>console.assert((x == 1), "assert message: x != 1"); </xmp></td>
+  </tr>
+  <tr>
+    <td>clear()</td>
+    <td>Borra los mensajes de la ventana de la consola, incluidos los mensajes de error de secuencia de comandos, y también borra el script </td>
+    <td><xmp>console.clear();</xmp></td>
+  </tr>
+  <tr>
+    <td>count(title)</td>
+    <td>Envía el número de veces que el comando count fue llamado a la ventana de consola. </td>
+    <td><xmp>console.count();	  
+	console.count("inner loop");</xmp></td>
+  </tr>
+  <tr>
+    <td>debug(message)</td>
+    <td>Se ingresa todo el codigo que se visualiza en una pagina Web </td>
+    <td><xmp><body>...Codigo Visible...</body></xmp></td>
+  </tr>
+  <tr>
+    <td>Iniciar</td>
+    <td>Envía messagea la ventana de consola.Este comando es idéntico a console.log. </td>
+    <td>console.debug("logging message");</td>
+  </tr>
+  <tr>
+    <td>dir(object)</td>
+    <td>Envía el objeto especificado a la ventana de consola y lo muestra en un visualizador de objetos. </td>
+    <td><xmp>console.dir(obj);</xmp></td>
+  </tr>
+   <tr>
+    <td>dirxml(object)</td>
+    <td> Envía el nodo XML especificado objecta la ventana de consola y lo muestra como un árbol de nodos XML. </td>
+    <td><xmp>console.dirxaml(xmlNode);</xmp></td>
+  </tr>
+   <tr>
+    <td>error(message)</td>
+    <td>nvía messagea la ventana de consola. El texto del mensaje es rojo y precedido por un símbolo de error. </td>
+    <td><xmp>console.error("error message");</xmp></td>
+  </tr>
+   <tr>
+    <td>group(title)</td>
+    <td>Inicia un agrupamiento para los mensajes que se envían a la ventana de la consola y envía el opcional titlecomo una etiqueta de grupo</td>
+    <td><xmp><br>console.group("Level 2 Header"); 
+ console.log("Level 2"); 
+ console.group(); </br></xmp></td>
+  </tr>
+  <tr>
+    <td>groupEnd()</td>
+    <td>Finaliza el grupo actual.
+Requisitos: 
+Visual Studio 2013</td>
+    <td><xmp>Consulte el ejemplo del groupcomando.</xmp></td>
+  </tr>
+  <tr>
+    <td>log(message)</td>
+    <td>Envía messagea la ventana de consola. </td>
+    <td><xmp>console.log("logging message")</xmp></td>
+  </tr>
+   <tr>
+    <td>profile(reportName)</td>
+    <td>Se utiliza en aplicaciones web. No se admite en Aplicaciones de almacenamiento mediante JavaScript.</td>
+    <td><xmp>No soportado.</xmp></td>
+  </tr>
+  <tr>
+    <td>Select(element)</td>
+    <td>Selecciona el HTML especificado elementen el Explorador de DOM</td>
+    <td><xmp>console.select (elemento)</xmp></td>
+  </tr>
+  <tr>
+    <td>$(id)</td>
+    <td>Devuelve un elemento por ID. Este es un comando de acceso directo para document.getElementById(id), donde ides una cadena que representa el ID del elemento.</td>
+    <td><xmp>$("contenthost")</xmp></td>
+  </tr>
+  
+  
+  
+</table>

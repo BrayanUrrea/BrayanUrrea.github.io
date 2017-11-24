@@ -25,18 +25,14 @@ function fnServer(req, res){
 	  console.log( "1.1 Si se cumple" );
 	  /// Verificar el usuario cuando llaman /login
 	  verificarUsuario( req, res );
-  } else if( req.url == "/registro"){
+  } else if( req.url == "/nosoyunarchivo"){
 	  console.log("Me piden crear un usuario");
 	  registrarUsuario( req, res );
   }
- /* } else if( req.url == "/verificar"){
-	  console.log("cumple");
-	  verificarEmail( req, res );
-  }
-  else if ( req.url == "/compras" ){
+  else if ( req.url == "/" ){
 	  console.log( "Pidieron el raiz /" );
-	 registrarCompra( req, res );
-  }  */
+	  res.end( "Hola Heroku!" );
+  }
   
 	  else {
 	  console.log( "1.2. No se cumple" );
@@ -51,10 +47,6 @@ var usuarios = [
 	{ usuario: "yo", clave: "secreta"},
 	{ usuario: "tu", clave: "publica"}
 ];
-/*var compras = [
-	{ paginaWeb: ".com", precio: "30.000"},
-	{ paginaWeb: ".net", precio: "20.000"}
-]; */
 
 function registrarUsuario( req, res ){
 	
@@ -72,23 +64,6 @@ function registrarUsuario( req, res ){
 	}
 	
 }
-/*function registrarCompra( req, res ){
-	
-	req.on( 'data', yaLlegoElPayload );
-	
-	function yaLlegoElPayload( content ){
-		var cmp = JSON.parse( content );
-		console.log( cmp );
-		// Añade a la lista de usuarios
-		compras.push(  cmp );
-		console.log( "Compras realizadas actualmente" );
-		console.log( compras );
-		
-		res.end("Ya lo guarde");
-	}
-	
-} */
-
 
 function verificarUsuario( req, res ){
 	console.log("Entro a verificarUsuario");
@@ -113,30 +88,6 @@ function verificarUsuario( req, res ){
 		
 	}
 }
-/*function verificarEmail( req, res ){
-	console.log("Entro a verificarEmail");
-	// el evento data se ejecuta cuando este completo el content del request
-	req.on( 'data', datosListos );
-	
-	function datosListos( content ){
-		console.log( "Entro a datosListos" );
-		// 1. Deserializar el objeto, que viene en content como una cadena
-		var usr = JSON.parse( content );
-		console.log( usr );
-		// 2. Buscarlo en la lista de usuarios
-		if( emailExiste( usr.email) ){
-		// 3. Enviar una respuesta
-			res.writeHead(200, { 'content-type': 'text/html' });
-			res.end( "Login correcto" );
-		} else {
-			res.writeHead(401, { 'content-type': 'text/html' });
-			res.end( "Usuario incorrecto" );
-		}
-			
-		
-	}
-} */
-
 /// Busca en el vector si el usuario y la clave son correctos
 function usuarioExiste( nombre, clave ){
 	for( var i=0; i < usuarios.length; i++ ){
@@ -146,14 +97,6 @@ function usuarioExiste( nombre, clave ){
 	
 	return false;
 }
-/*function emailExiste( nombre){
-	for( var i=0; i < usuarios.length; i++ ){
-		if( usuarios[i].usuario == nombre)
-			return true;
-	}
-	
-	return false;
-} */
 
 
 function paginaPorDefecto(req, res){
@@ -199,3 +142,11 @@ server.listen( port );
 
 console.log( "Servidor HTTP corriendo en el puerto " + port);
 console.log( "Ctrl-c para terminar");
+
+
+
+
+
+
+
+

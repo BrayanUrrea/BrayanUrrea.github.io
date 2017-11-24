@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="Styles/style1.css">
+<title> Guia de HTML </title>
+<style>
+.slide {
+width: 100%;
+margin: auto;
+overflow: hidden;
+}
+
+.slide ul {
+display: flex;
+padding: 0;
+width: 400%;
+animation: cambio 12s infinite alternate linear;
+}
+
+.slide li {
+width: 100%;
+list-style: none;
+}
+
+.slide img {
+width: 100%;
+}
+
+@keyframes cambio {
+0% {margin-left: 0;}
+20% {margin-left: 0;}
+25% {margin-left: -100%;}
+45% {margin-left: -100%;}
+50% {margin-left: -200%;}
+70% {margin-left: -200%;}
+75% {margin-left: -300%;}
+100% {margin-left: -300%;}
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #caf7d4;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #caf7d4;
+}
+tr:nth-child(odd) {
+    background-color: #85CDD0;
+}
+
+</style>
+</head>
+<body>
+<div class="slide">
+<ul>
+<li>
+  <img src="generador.jpg">
+ </li>
+<li>
+   <img src="banner2.jpg">
+</li>
+<li>
+  <img src="banner3.jpg">
+</li>
+<li>
+   <img src="banner4.jpg">
+</li>
+</ul>
+</div> 
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="AcercaDe.html">Acerca de</a></li>
+        <li><a href="GuiaJavaScript.html">Javascript</a></li>
+        <li><a href="CSS.html">Css</a></li>
+        <li><a href="GuiaHtml.html">Html</a></li>
+        <li><a href="i.html">Inicio</a></li>
+        <li><a href="Compras.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+<p align="center"><img src="BannerGuia.png"/></p>
+<table>
+  <tr>
+    <th>Comando</th>
+    <th>Descripcion</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td>Title</td>
+    <td>Coloca el titulo deseado en la pestaña de la web</td>
+    <td><xmp><title> Page Title</title> </xmp></td>
+  </tr>
+  <tr>
+    <td>Head</td>
+    <td>Se coloca el codigo que no se requiera ver para el sitio web </td>
+    <td><xmp><head>... Referencias de informacion de estilos....</head></xmp></td>
+  </tr>
+  <tr>
+    <td>Encabezados o titulos</td>
+    <td>Coloca los titulos en la pagina  para diferenciarse del texto normal</td>
+    <td><xmp><h1>Titulo del documento</h1> se varia hasta h6 para el tamaño del titulo</xmp></td>
+  </tr>
+  <tr>
+    <td>Body</td>
+    <td>Se ingresa todo el codigo que se visualiza en una pagina Web </td>
+    <td><xmp><body>...Codigo Visible...</body></xmp></td>
+  </tr>
+  <tr>
+    <td>Iniciar</td>
+    <td>Se Escribe al iniciar cualquier diseño de pagina web </td>
+    <td><xmp><html>...Todo el codigo...</html></xmp></td>
+  </tr>
+  <tr>
+    <td>Parrafo</td>
+    <td>Separa todo el texto en fragmentos por unidad tematica</td>
+    <td><xmp><p> Esto es un parrafo.</p></xmp></td>
+  </tr>
+   <tr>
+    <td>Links</td>
+    <td> Agrega un hipervinculo a la pagina web </td>
+    <td><xmp><a href="https://www.facebook.com">Esto es un link</a></xmp></td>
+  </tr>
+   <tr>
+    <td>Imagen</td>
+    <td>Insertar una imagen en la pagina web, con widt y height se controla la altura y ancho de la imagen</td>
+    <td><xmp><img src="imagen1.jpg" alt="facebook.com" width="104" height="142"></xmp></td>
+  </tr>
+   <tr>
+    <td>Interlineado</td>
+    <td>Se coloca un salto linea en el texto para que no quede seguido</td>
+    <td><xmp><br>Salta de linea en los textos</br></xmp></td>
+  </tr>
+  <tr>
+    <td>Color fondo pagina</td>
+    <td>Elegimos un color para el fondo de la pagina </td>
+    <td><xmp><body bgcolor="Blue"></body></xmp></td>
+  </tr>
+  <tr>
+    <td>Imagen fondo pagina</td>
+    <td>Elegimos una imagen para el fondo de la pagina </td>
+    <td><xmp><body background="Ejemplo.jpg(o gif)"></xmp></td>
+  </tr>
+   <tr>
+    <td>Color de la letra</td>
+    <td>Se escoje un color de letra para el texto que escribamos en la pagina </td>
+    <td><xmp><font color="#Blue"></font></xmp></td>
+  </tr>
+  <tr>
+    <td>Tamaño de la letra</td>
+    <td>Se escoje un trabajo de letra para el texto que escribamos en la pagina </td>
+    <td><xmp><font size="n" ></font></xmp></td>
+  </tr>
+  
+  
+  
+</table>
+
+</body>
+</html>

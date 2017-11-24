@@ -1,32 +1,157 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Acerca De</title>
-	<style>
-		.egt {
-			border: 1px solid #000;
+	<title>Acerca de Nosotros</title>
+	<style> 
+		*{
+			margin: 0px;
+			padding: 0px;
+			color: #fff;
+		}
+		body{
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			height:700px;
+			font-family:Arial;
+		}
+
+		nav{
+			z-index: 1;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		ul{
+			width: 100%;
+			margin: 0px auto;
+			list-style: none;
+			background-color: rgba(0, 0, 0, 0.7);
+			display: inline-block;
+		}
+
+		ul li{
+			width: 16.6666667%;
+			float: left;
+			display: block;
+			
+		}
+
+		ul li a{
+			padding: 20px;
+			text-decoration: none;
+			display: block;
+			color: #fff;	
+			font-family: Arial;
+			text-align: center;
+		}
+
+		ul li a:not(#inicio){
+			border-left: 1px solid gray;
+
+		}
+
+
+
+		ul li a:hover{
+			background-color:  rgba(255,88,0,0.3);
+		
+		}
+
+		h1{
+			text-align: center;
+			display: block;
+			font-size: 30px;
+			color: #fff;
+			margin-top: 15px;
+		}
+
+		#contenedor{
+			padding-top: 30px;
+			width: 100%;
+			display: inline-block;
+			
+		}
+
+		#contenedor div{
+			float: left;
+			width: 36%;
+			margin: 2%;
+			text-align: center;
+			background: rgba(0, 0, 0, 0.3);
+			padding: 2%;
+			border-radius: 20px;
+
+		}
+
+		#contenedor div h3 p{
+			text-align: center;
+			font-size: 50%;
+		}
+
+		div img{
+			width: 100%;
+			height: auto;
+			opacity: 0.5;
+			position: absolute;
+			z-index:-1;
+			left: 0;
+			top: 0;
+		}
+
+		img{
+			width: 100%;
+			height: 150px;
+			display: block;
+
+		}
+
+		footer{
+			width: 100%;
+			height: 100px;
+			background-color: #000;
+			text-align: center;
+			padding: 20px 0px;
 		}
 	</style>
 </head>
-<body>
-
-<p>INTEGRANTES</p>
-<table class="egt">
-  <tr>
-    <td>Brayan Urrea</td>
-  </tr>
-  <tr>
-    <td>Sebastian Giraldo</td>
-  </tr>
-  <tr>
-    <td>Juan Fernando Vergara</td>
-  </tr>
-  <tr>
-    <td>Andres Felipe Orozco</td>
-  </tr>
-</table>
-
-<p>El proposito de este sitio web es enseñar a crear paginas web en el cual se tiene que realizar su respectivo registro y su login, en esta pagina web se muestra todas las partes que debe contener un archivo HTML (css, javascript y body) con sus respectivos comando.</p>
-
+<body>	
+	<img src="baner_web_select_logo.jpg">
+	<header>
+		<nav>
+			<ul>
+				<li><a id="inicio" href="i.html">Inicio</a></li>
+				<li><a href="GuiaHtml.html">Html</a></li>
+				<li><a href="CSS.html">Css</a></li>
+				<li><a href="GuiaJavaScript.html">Javascript</a></li>
+				<li><a href="AcercaDe.html">Acerca de</a></li>
+				<li><a href="Compras.html">Carrito</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div><img src="dw.jpg"></div>
+	<div id="contenedor">
+		<div>
+			<h3>¿Qué es?</h3>
+			<p>Es este sitio web es enseñar a crear paginas web en el cual se tiene que realizar su respectivo registro y su login, en esta pagina web se muestra todas las partes que debe contener un archivo HTML (css, javascript y body) con sus respectivos comando.</p>
+		</div>
+		<div>
+			<h3>¿Que utilizamos de lo visto en clase?</h3>
+			<p>Usamos varios tipos de las cosas vistos en clases como añadir una imagen, crear tablas , añadir hipervinculos el manejo de espacio en una pagina web y agregar slider para ver el paso de varias imagenes.</p>
+		</div>
+		<div>
+			<h3>¿Cual es el proposito?</h3>
+			<p>Con esta plataforma la idea es guiar a los usuarios que esten en proceso de aprender a diseñar paginas web con unos instrumentos que nosotros les brindamos para aprender con nuestros tutoriales. </p>
+		</div>
+		<div>
+			<h3>Integrantes.</h3>
+			<p>Brayan Urrea Ciro.</p>
+			<p>Sebastian Giraldo Tamayo</p>
+            <p>Juan Fernando Vergara Arrieta.</p>
+		</div>
+	</div>
+	<footer>
+		<p>COPYRIGHT &copy 2017 BRAYAN URREA,SEBASTIAN GIRALDO, JUAN FERNANDO VERGARA</p>
+	</footer>
 </body>
 </html>

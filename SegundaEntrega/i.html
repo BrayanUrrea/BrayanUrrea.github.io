@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Inicio</title>
+
+	<style> 
+		*{
+			margin: 0px;
+			padding: 0px;
+			color: #000;
+		}
+		body{
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			height:700px;
+			font-family:Arial;
+		}
+
+		nav{
+			z-index: 1;
+			margin: 0px;
+			padding: 0px;
+		}
+
+		ul{
+			width: 100%;
+			margin: 0px auto;
+			list-style: none;
+			background-color: rgba(0, 0, 0, 0.7);
+			display: inline-block;
+		}
+
+		ul li{
+			width: 16.6666667%;
+			float: left;
+			display: block;
+			
+		}
+
+		ul li a{
+			padding: 20px;
+			text-decoration: none;
+			display: block;
+			color: #fff;	
+			font-family: Arial;
+			text-align: center;
+		}
+
+		ul li a:not(#inicio){
+			border-left: 1px solid gray;
+
+		}
+
+
+
+		ul li a:hover{
+			background-color:  rgba(255,88,0,0.3);
+		
+		}
+
+
+		div img{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			z-index:-1;
+			opacity: 0.5;
+			left: 0;
+			top: 0;
+		}
+
+		img{
+			width: 100%;
+			height: 150px;
+			display: block;
+
+		}
+
+		footer{
+			width: 100%;
+			height: 100px;
+			background-color: #000;
+			text-align: center;
+			padding: 20px 0px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		p{
+
+			text-align: center;
+			margin-top: 20px;
+			width: 35%;
+			margin-left: 70px;
+			border-radius: 20px;
+			font-family: Arial;
+			padding: 20px;
+			font-size: 50px;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	</style>
+</head>
+<body>	
+	<img src="baner_web_select_logo.jpg">
+	<header>
+		<nav>
+			<ul>
+				<li><a id="inicio" href="i.html">Inicio</a></li>
+				<li><a href="GuiaHtml.html">Html</a></li>
+				<li><a href="CSS.html">Css</a></li>
+				<li><a href="GuiaJavaScript.html">Javascript</a></li>
+				<li><a href="AcercaDe.html">Acerca de</a></li>
+				<li><a href="Compras.html">Carrito</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div><img src="inicio.jpg"></div>
+	<p>DISEÑA Y DESARROLLA SITIOS WEB MODERNOS A TÚ ALCANCE.</p>
+</body>
+</html>
