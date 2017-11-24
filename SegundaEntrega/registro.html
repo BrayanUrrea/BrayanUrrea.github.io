@@ -141,6 +141,7 @@
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			// Aqui puede mostrar un mensaje cuando termine de enviar los datos
 				alert("Registrado correctamente");
+				window.location="login.html";
 			}
 			if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
 			// Aqui puede mostrar un mensaje cuando ocurra un error
@@ -192,19 +193,12 @@
     </label>
       <br />
       <input type="password" id="clave" value="">
-  </p>
-	<p>
-	  <label>
-      Confirmar Contraseña
-    </label>
-      <br />
-      <input type="password" id="verifica" value="">
-  </p>
-  <button id="guardar" onclick="Registrar()"  >Registrar</button>
+  
+  
 </form>
 
 	
 	</div>
-	
+	<button id="guardar" onclick="Registrar()"  >Registrar</button>
 </body>
 </html>
