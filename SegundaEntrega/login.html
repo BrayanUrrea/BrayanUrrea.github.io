@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Iniciar sesión</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="Styles/style.css">
-	<title>Iniciar sesión</title>
 	<link rel="shorcut icon" type="image/x-icon" href="Images/icono.jpg">
 	<link rel="icon" type="image/x-icon" href="Images/icono.jpg">
 	<style>
@@ -113,32 +113,44 @@
 	</style>
 
 	<script>
-		function SalvarCampos() {
-			var usuario = {};
-			usuario.email = document.getElementById('email').value;
-			usuario.contraseña = document.getElementById('contraseña').value;
-			return usuario;
-		}
+		function SalvarCampos(){
+		var usuario = {};
+		usuario.email = document.getElementById( "email" ).value ;
+		usuario.clave = document.getElementById( "clave" ).value ;
+		return usuario;
+	}
+	
+	function Ingresar(){
+		// Arma un objeto con los dato singresados por el usuario
+		var usuario=SalvarCampos();
+		
+		var serializado = "";
+		// Serializar el objeto como una cadena de texto JSON
+		serializado = JSON.stringify( usuario );
+		window.alert( serializado );
 
-		function Ingresar() {
-			var usuario = SalvarCampos();
-
-			var serializado = "";
-			serializado = JSON.stringify(usuario);
-			window.alert(serializado);
-			var xmlhttp = new XMLHttpRequest();
-			var url = "/login";
-			xmlhttp.onreadystatechange = function() {
-				if (xmlhttp.readySate == 4 && xmlhttp.status == 200) {
-					alert("Bienvenido");
-				}
-				if (xmlhttp.readySate == 4 && xmlhttp.status != 200) {
-					alert("incorrecto");
-				}
-			};
-			xmlhttp.open("POST", url, true);
-			xmlhttp.send(serializado);
-		}
+		var xmlhttp = new XMLHttpRequest();
+		// Direccion donde se van a enviar los datos
+		var url = "/login";
+		// Callback que se llama cuando termine la petición
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			// Aqui puede mostrar un mensaje cuando termine de enviar los datos
+				alert("Bienvenido");
+			    window.location="i.html";
+			}
+			if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
+			// Aqui puede mostrar un mensaje cuando ocurra un error
+				alert("usuario incorrecto");
+			}
+		};
+		// Inicia la conexión
+		xmlhttp.open("POST", url, true);
+		// Envia la petición
+		// el parametro del metodo send() es el content de la peticion (request)
+		// objetoAEnviar es el objeto que queremos enviar al servidor
+		xmlhttp.send(serializado);
+	}
 	</script>
 
 </head>
@@ -159,7 +171,7 @@
       Correo electrónico
       </label>
       <br />
-      <input type="secret" id="correo" value="">
+      <input type="secret" id="email" value="">
 
 	</p>
 	<p>
@@ -167,17 +179,14 @@
       Contraseña
     </label>
       <br />
-      <input type="password" id="contraseña" value="">
-  </p>
-  <button id="guardar" onclick="Registrar()">Iniciar sesión</button>
-  	<a href="OlvidoContraseña.html"><h6>¿Tiene problemas con la cuenta?</h6></a>
-  	<a href="registro.html"><h6>Registrarse</h6></a>
+      <input type="password" id="clave" value="">
+ 
 </form>
 
-	
+	<button id="guardar" onclick="Ingresar()"  >Ingresar</button>
+  	<a href="verificar.html"><h6>¿Tiene problemas con la cuenta?</h6></a>
+  	<a href="registro.html"><h6>Registrarse</h6></a>
 	</div>
-	<footer>
-		
-	</footer>
+	
 </body>
 </html>
