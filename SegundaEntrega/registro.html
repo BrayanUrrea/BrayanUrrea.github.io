@@ -112,42 +112,40 @@
 
 	</style>
 	<script>
+		// Declarar un objeto
+	
 	function SalvarCampos(){
 		var usuario = {};
+		usuario.nombre = document.getElementById( "nombre" ).value ;
 		usuario.usuario = document.getElementById( "email" ).value ;
 		usuario.clave = document.getElementById( "clave" ).value ;
 		
 		return usuario;
 		
-		function Registrar(){
-    
-		var usuario=SalvarCampos();
-		var  clave = document.getElementById("clave").value;
-		var verifica = document.getElementById("verifica").value;
+		
+	}
 	
+	function Registrar(){
+		var usuario=SalvarCampos();
+		
 		var serializado = "";
 		// Serializar el objeto como una cadena de texto JSON
 		serializado = JSON.stringify( usuario );
 		window.alert( serializado );
 		
 		var xmlhttp = new XMLHttpRequest();
-		if (clave==verifica && clave.length >= 6 ){ //En este ciclo if se verifica que las claves sean iguales y mayor de 6 caracteres by: Juan Vergara
 		// Direccion donde se van a enviar los datos
 		var url = "/registro";
 		// Callback que se llama cuando termine la petición
-		
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			// Aqui puede mostrar un mensaje cuando termine de enviar los datos
-				alert("Usuario registrado correctamente!");
+				alert("Registrado correctamente");
 			}
 			if (xmlhttp.readyState == 4 && xmlhttp.status != 200) {
 			// Aqui puede mostrar un mensaje cuando ocurra un error
 				alert("usuario incorrecto");
 			}
-			}
-		} else {  // en caso de que la primera condicion del if no se cumpla se envia una alerta que las claves son invalidas. by: Juan Vergara
-		alert("Clave no permitida verificar que estas sean iguales y mayores de 6 caracteres");
 		};
 		// Inicia la conexión
 		xmlhttp.open("POST", url, true);
@@ -172,12 +170,20 @@
 		
 
   <form action="#" >
+  <p>
+	  <label>
+      Nombre
+      </label>
+      <br />
+      <input type="text" id="nombre" value="">
+
+	</p>
 	<p>
 	  <label>
       Correo electrónico
       </label>
       <br />
-      <input type="text" id="correo" value="">
+      <input type="text" id="email" value="">
 
 	</p>
 	<p>
@@ -185,24 +191,20 @@
       Contraseña
     </label>
       <br />
-      <input type="password" id="contraseña" value="">
+      <input type="password" id="clave" value="">
   </p>
 	<p>
 	  <label>
       Confirmar Contraseña
     </label>
       <br />
-      <input type="password" id="confirmarcontraseña" value="">
+      <input type="password" id="verifica" value="">
   </p>
-  <button id="guardar" onclick="Registrar()"  >Registrarme</button>
-  	<a href=""><h6>¿Tiene problemas con la cuenta?</h6></a>
-  	<a href=""><h6>Registrarse</h6></a>
+  <button id="guardar" onclick="Registrar()"  >Registrar</button>
 </form>
 
 	
 	</div>
-	<footer>
-		
-	</footer>
+	
 </body>
 </html>
