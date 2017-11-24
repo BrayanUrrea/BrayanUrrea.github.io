@@ -1,11 +1,15 @@
 {
-  "name": "web_select",
+  "name": "Web Select",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web Select",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "SebastianGiraldo-BryanUrrea-JuanVergara",
+  "license": "ISC",
+  "dependencies": {
+  "express": "^4.16.2"
+  }
 }
